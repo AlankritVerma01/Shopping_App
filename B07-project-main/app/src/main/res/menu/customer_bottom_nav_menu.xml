@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/allStores"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Stores" />
+
+    <item
+        android:id="@+id/fragment_OrderStatus"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="My Orders" />
+
+    <item
+        android:id="@+id/profileCustomerFragment"
+        android:icon="@drawable/ic_person"
+        android:title="Profile" />
+
+</menu>

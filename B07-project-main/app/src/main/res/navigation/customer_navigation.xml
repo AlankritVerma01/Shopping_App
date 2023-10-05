@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/seller_navigation"
+    app:startDestination="@id/allStores">
+
+    <!--  TODO Add store list page xml  -->
+    <fragment
+        android:id="@+id/allStores"
+        android:name="com.example.b07_project.pages.customer.allStores.AllStores"
+        android:label="Stores"
+        tools:layout="@layout/fragment_customer_all_stores" >
+        <action
+            android:id="@+id/action_allStores_to_customerStorePage"
+            app:destination="@id/customerStorePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerStorePage"
+        android:name="com.example.b07_project.pages.customer.CustomerStorePage"
+        android:label="Customer Store Page"
+        tools:layout="@layout/fragment_customer_store_page" >
+
+        <action
+            android:id="@+id/action_customerStorePage_to_customerItemPageFragment"
+            app:destination="@id/customerItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customerItemFragment"
+        android:name="com.example.b07_project.pages.customer.CustomerItemFragment"
+        android:label="Customer Item Page"
+        tools:layout="@layout/fragment_customer_store_page" >
+    </fragment>
+
+
+    <!--  TODO Add customer orders page xml  -->
+    <fragment
+        android:id="@+id/fragment_OrderStatus"
+        android:name="com.example.b07_project.pages.customer.orders.OrderStatusFragment"
+        android:label="Orders"
+        tools:layout="@layout/fragment_customer_order_main_choice">
+        <action
+            android:id="@+id/action_fragment_OrderStatus_to_completedOrderActivity"
+            app:destination="@id/completedOrderActivity" />
+        <action
+            android:id="@+id/action_fragment_OrderStatus_to_pendingOrderAllFragment"
+            app:destination="@id/pendingOrderAllFragment" />
+        <action
+            android:id="@+id/action_fragment_OrderStatus_to_main_cart"
+            app:destination="@id/main_cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/completedOrderActivity"
+        android:name="com.example.b07_project.pages.customer.orders.CompletedOrders.CompletedOrderAllFragment"
+        android:label="Completed Orders"
+        tools:layout="@layout/fragment_completed_order">
+        <action
+            android:id="@+id/action_completedOrderActivity_to_completedOrdersSingleFragment"
+            app:destination="@id/completedOrdersSingleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/completedOrdersSingleFragment"
+        android:name="com.example.b07_project.pages.customer.orders.CompletedOrders.CompletedOrdersSingleFragment"
+        android:label="Completed Order Details"
+        tools:layout="@layout/fragment_completed_order_detail"/>
+    <fragment
+        android:id="@+id/pendingOrderAllFragment"
+        android:name="com.example.b07_project.pages.customer.orders.PendingOrders.PendingOrderAllFragment"
+        android:label="Pending Orders"
+        tools:layout="@layout/fragment_customer_pending_order">
+        <action
+            android:id="@+id/action_pendingOrderAllFragment_to_pendingOrderSingleFragment"
+            app:destination="@id/pendingOrderSingleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pendingOrderSingleFragment"
+        android:name="com.example.b07_project.pages.customer.orders.PendingOrders.PendingOrderSingleFragment"
+        android:label="Pending Order Details"
+        tools:layout="@layout/fragment_customer_pending_order_detail"/>
+    <fragment
+        android:id="@+id/main_cart"
+        android:name="com.example.b07_project.pages.customer.orders.shoppingCart.main_cart"
+        android:label="Cart"
+        tools:layout="@layout/fragment_customer_main_cart" >
+        <action
+            android:id="@+id/action_main_cart_to_customerStorePage"
+            app:destination="@id/customerStorePage" />
+    </fragment>
+
+    <!--  TODO Add customer profile xml  -->
+    <fragment
+        android:id="@+id/profileCustomerFragment"
+        android:name="com.example.b07_project.pages.profile.ProfileCustomerFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileCustomerFragment_to_editCustomerProfileFragment"
+            app:destination="@id/editCustomerProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editCustomerProfileFragment"
+        android:name="com.example.b07_project.pages.profile.EditCustomerProfileFragment"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_editprofile" />
+</navigation>

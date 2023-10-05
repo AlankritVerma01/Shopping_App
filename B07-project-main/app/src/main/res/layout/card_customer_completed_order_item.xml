@@ -1,0 +1,66 @@
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="#FFFFFF"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+    <TextView
+        android:id="@+id/itemsOrdered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="order details"
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/num_suborders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of Suborders"
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemsOrdered" />
+
+
+    <TextView
+        android:id="@+id/orderValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Value"
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_suborders"/>
+
+    <TextView
+        android:id="@+id/dateordered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date Ordered"
+        android:textSize="18sp"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderValue" />
+        <Button
+            android:id="@+id/detail_button_completed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/details" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

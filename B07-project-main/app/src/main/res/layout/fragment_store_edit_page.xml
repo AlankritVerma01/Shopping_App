@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".pages.store.StoreEditPage">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/store_name_field_label"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/field_store_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/store_name_field_hint"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColorHint="#A1887F"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/store_desc_field_label"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/field_store_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|top"
+        android:hint="@string/store_desc_field_hint"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:textColorHint="#A1887F"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@android:string/cancel" />
+
+</LinearLayout>

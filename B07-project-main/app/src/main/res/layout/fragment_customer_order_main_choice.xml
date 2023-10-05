@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="15dp"
+    tools:context=".pages.start_screen.MainActivity_question">
+
+
+    <Button
+        android:id="@+id/pending"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:text="Pending Orders"
+        android:layout_marginBottom="70dp"/>
+
+    <Button
+        android:id="@+id/completed"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:text="Completed Orders"
+        android:layout_marginBottom="70dp"/>
+
+    <Button
+        android:id="@+id/cart"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:text="View Cart"
+        android:layout_marginBottom="70dp"/>
+
+</LinearLayout>

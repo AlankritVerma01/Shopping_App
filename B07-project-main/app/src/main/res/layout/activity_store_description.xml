@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".pages.store.store_description">
+
+
+        <!-- Custom Toolbar -->
+        <!-- Uncomment the toolbar code if required -->
+        <!--
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/black"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_arrow_back"
+                android:contentDescription="Back"
+                android:padding="8dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store Owner Profile"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+        </androidx.appcompat.widget.Toolbar>
+        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="#5cc09F">
+
+            <!-- Image of the User -->
+            <ImageView
+                android:id="@+id/imageView_profile_dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/no_profile_pic" />
+
+            <!-- Text field for the name of the user -->
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView_profile_dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:hint="Loading...."
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:background="@android:color/white"
+            android:padding="15dp">
+
+            <!-- Show Name -->
+            <ImageView
+                android:id="@+id/ic_profile"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_profile" />
+
+            <TextView
+                android:id="@+id/textView_show_full_storeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/ic_profile"
+                android:layout_marginStart="10dp"
+                android:hint="Loading...."
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/divider_name"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/textView_show_full_storeName"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Show Number of completed orders -->
+            <ImageView
+                android:id="@+id/ic_no_complete_orders"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/divider_name"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_email" />
+
+            <TextView
+                android:id="@+id/textView_show_number_of_complete_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/ic_no_complete_orders"
+                android:layout_marginStart="10dp"
+                android:layout_below="@id/divider_name"
+                android:layout_marginTop="20dp"
+                android:hint="Loading..."
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/divider_complete_orders"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/textView_show_number_of_complete_orders"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Show Number of pending orders -->
+            <ImageView
+                android:id="@+id/ic_no_pending_orders"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/divider_complete_orders"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_email" />
+
+            <TextView
+                android:id="@+id/textView_show_number_of_pending_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/ic_no_pending_orders"
+                android:layout_marginStart="10dp"
+                android:layout_below="@id/divider_complete_orders"
+                android:layout_marginTop="20dp"
+                android:hint="Loading..."
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/divider_pending_orders"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/textView_show_number_of_pending_orders"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Rating for the store - Add Rating UI if necessary -->
+
+            <!-- Timings of the store being open - Add timings UI if necessary -->
+
+            <Button
+                android:id="@+id/button_to_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider_pending_orders"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:text="View Profile" />
+
+        </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="Edit Profile"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+</FrameLayout>

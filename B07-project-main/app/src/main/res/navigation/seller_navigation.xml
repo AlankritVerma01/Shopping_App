@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/seller_navigation"
+    app:startDestination="@id/StorePage">
+
+<!--    Store page  -->
+    <fragment
+        android:id="@+id/StorePage"
+        android:name="com.example.b07_project.pages.store.StorePage"
+        android:label="@string/ui_store_page_label"
+        tools:layout="@layout/fragment_store_page">
+        <action
+            android:id="@+id/action_StorePage_to_StoreEditPage"
+            app:destination="@id/StoreEditPage" />
+        <action
+            android:id="@+id/action_StorePage_to_itemPageFragment"
+            app:destination="@id/itemPageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/StoreEditPage"
+        android:name="com.example.b07_project.pages.store.StoreEditPage"
+        android:label="Edit Store Page"
+        tools:layout="@layout/fragment_store_edit_page"/>
+
+
+    <fragment
+        android:id="@+id/profileStoreOwnerFragment"
+        android:name="com.example.b07_project.pages.profile.ProfileStoreOwnerFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileStoreOwnerFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.b07_project.pages.profile.EditStoreOwnerProfileFragment"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_editprofile"/>
+    <fragment
+        android:id="@+id/itemPageFragment"
+        android:name="com.example.b07_project.pages.store.ItemPageFragment"
+        android:label="Edit Item"
+        tools:layout="@layout/fragment_store_item_page" />
+    <fragment
+        android:id="@+id/storeOrderPage"
+        android:name="com.example.b07_project.pages.store.order.StoreOrderPage"
+        android:label="Orders"
+        tools:layout="@layout/fragment_store_order_page">
+        <action
+            android:id="@+id/action_storeOrderPage_to_orderListFragment"
+            app:destination="@id/orderListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderListFragment"
+        android:name="com.example.b07_project.pages.store.order.OrderListFragment"
+        android:label="Orders"
+        tools:layout="@layout/fragment_store_order_list">
+        <action
+            android:id="@+id/action_orderListFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.example.b07_project.pages.store.order.ItemListFragment"
+        android:label="Order Details"
+        tools:layout="@layout/fragment_store_item_list" />
+</navigation>
